@@ -1,0 +1,271 @@
+{
+	"info": {
+		"_postman_id": "ffa383a5-e7b2-47fa-8504-837d79c933c7",
+		"name": "Ignite 01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Statement",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/statement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"statement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cpf\": \"12345678909\",\r\n    \"name\": \"Brian Arruk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Depósito teste\",\r\n    \"amount\": 1500.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Statement By Date",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/statement/date?date=2022-05-15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"statement",
+						"date"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2022-05-15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Brian Atualizado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3333/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/statement",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"statement"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Balance",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cpf",
+						"value": "12345678909",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3333/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
